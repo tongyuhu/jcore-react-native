@@ -17,5 +17,11 @@ Pod::Spec.new do |s|
   s.preserve_paths     = "**/*.js"
   s.vendored_libraries = "ios/RCTJCoreModule/*.a"
  	
+  s.frameworks = "UIKit","CFNetwork","CoreFoundation","CoreTelephony","SystemConfiguration","CoreGraphics","Foundation","WebKit","Security"
+  s.pod_target_xcconfig = {'VALID_ARCHS' => 'x86_64 armv7 arm64'}
+  s.weak_frameworks = "UserNotifications","AppTrackingTransparency"
+  s.libraries = "z","resolv"
+  
+  
   s.dependency 'React'
 end
